@@ -1,0 +1,21 @@
+<h2>Liste des accessoires</h2>
+<ul>
+    <li>
+        <img [src]="tabAccess[0].image" alt="casque">
+        - {{tabAccess[0].name}} 
+        - {{tabAccess[0].description}}
+        - {{tabAccess[0].price}}
+        - Réduction <input type="number" #txtRed value="0">
+        - <input type="checkbox" [checked]="tabAccess[0].available">
+        <button (click)="calculerPrix(txtRed.value)"> Prix final</button>
+    </li>
+    <li>
+        <img [src]="tabAccess[1].image" alt="casque">
+        - {{tabAccess[1].name}} 
+        - {{tabAccess[1].description}}
+        - {{tabAccess[1].price}}
+        - Réduction <input type="number" [(ngModel)] ="reduction">
+        - <input type="checkbox" [checked]="tabAccess[1].available">
+        <button (click)="calculerPrix2()"> Prix final</button>
+    </li>
+</ul>
