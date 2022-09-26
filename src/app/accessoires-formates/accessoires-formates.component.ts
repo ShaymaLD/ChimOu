@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-accessoires',
-  templateUrl: './accessoires.component.html',
-  styleUrls: ['./accessoires.component.css']
+  selector: 'app-accessoires-formates',
+  templateUrl: './accessoires-formates.component.html',
+  styleUrls: ['./accessoires-formates.component.css']
 })
-export class AccessoiresComponent implements OnInit {
-
+export class AccessoiresFormatesComponent implements OnInit {
   tabAccess = [
     { name: "Casque", image:"assets/casque.jpg", description:"Casque noir micro jack 3.5", price:10.9, available:true},
     { name: "Sac à dos PC", image:"assets/sac.jpg", description:"De couleur noir, il est destiné aux pc de 15.6\"", price:49, available:false}

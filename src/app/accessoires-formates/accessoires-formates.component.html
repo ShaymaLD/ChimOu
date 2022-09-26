@@ -1,0 +1,28 @@
+<div class="container"> <!-- Ce n'est pas impératif dans notre contexte-->
+    <h2>Liste des accessoires</h2>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-action">
+            <img [src]="tabAccess[0].image" alt="casque">
+          <strong>{{tabAccess[0].name}} </strong>   
+            : {{tabAccess[0].description}}
+            <br>
+            <span class="badge bg-warning">Prix {{tabAccess[0].price}} DT</span>
+
+            - Pourcentage Réduction <input type="number" #txtRed value="0" min="0" max="100">
+             <input type="checkbox" [checked]="tabAccess[0].available">Disponible
+            <button class="btn btn-dark" (click)="calculerPrix(txtRed.value)"> 
+                <i class="fa-solid fa-sack-dollar"></i> Prix final</button>
+        </li>
+        <li class="list-group-item list-group-item-action">
+            <img [src]="tabAccess[1].image" alt="casque">
+            <strong>{{tabAccess[1].name}} </strong>  
+            : {{tabAccess[1].description}}
+            <br>
+            <span class="badge bg-warning">  Prix {{tabAccess[1].price}} DT</span>   
+            - Pourcentage Réduction <input type="number" [(ngModel)] ="reduction" min="0" max="100">
+             <input type="checkbox" [checked]="tabAccess[1].available"> Disponible
+            <button class="btn btn-dark" (click)="calculerPrix2()">
+                <i class="fa-solid fa-sack-dollar"></i> Prix final</button>
+        </li>
+    </ul>   
+</div>
